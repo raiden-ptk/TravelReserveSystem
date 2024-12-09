@@ -2,13 +2,13 @@
 2024年秋季数据库4、5次上机内容
 
 ## 实验内容
-见：上机45.doc
+见：上机45要求.doc
 
 ## 该课设说明
 该课设的界面和思路参考了ZYCat学长的TourBookingSystem项目：https://github.com/izcat/TourBookingSystem 是基于其的c++实现版本，使用mysql库进行数据库链接操作。
 
 ## c++中数据库操作示例
-参考：https://blog.csdn.net/weixin_43450564/article/details/115537977 具体示例如下：
+如何在c++中操作mysql参考：https://blog.csdn.net/weixin_43450564/article/details/115537977 具体示例如下：
 ```
 #include <iostream>
 #include <mysql.h>

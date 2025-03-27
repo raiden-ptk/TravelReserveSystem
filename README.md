@@ -26,7 +26,7 @@ int main()
         
             // 2. 连接数据库服务器
             mysql = mysql_real_connect(mysql, "localhost", "root", "1234",//主机，用户名，密码，数据库名
-                "bank946", 0, NULL, 0);
+                "bank", 0, NULL, 0);
             if (mysql == NULL)
             {
                 printf("mysql_real_connect() error\n");
@@ -44,7 +44,7 @@ int main()
 
             // 3. 执行一个sql语句
             // 查询scott数据库下的dept部门表
-            const char* sql = "select * from account946";
+            const char* sql = "select * from account";
             // 执行这个sql语句
             int ret = mysql_query(mysql, sql);
             if (ret != 0)
@@ -91,9 +91,9 @@ int main()
             // 以下三条是一个完整的操作, 对应的是一个事务
             // 设置事务为手动提交
             mysql_autocommit(mysql, 0);
-            int ret1 = mysql_query(mysql, "insert into dept values(61, '海军', '圣地玛丽乔亚')");
-            int ret2 = mysql_query(mysql, "insert into dept values(62, '七武海', '世界各地')");
-            int ret3 = mysql_query(mysql, "insert into dept values(63, '四皇', '新世界')");
+            int ret1 = mysql_query(mysql, "insert into dept values(61, 'Stewie', 'FG')");
+            int ret2 = mysql_query(mysql, "insert into dept values(62, 'naruto', 'NARUTO')");
+            int ret3 = mysql_query(mysql, "insert into dept values(63, 'KK', 'hk')");
             printf("ret1 = %d, ret2 = %d, ret3 = %d\n", ret1, ret2, ret3);
         
             if (ret1 == 0 && ret2 == 0 && ret3 == 0)
